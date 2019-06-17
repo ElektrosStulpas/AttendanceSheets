@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="AttendanceSheetsProject.AttendanceWindowController">
+    <TableView fx:id="attendanceTable" layoutX="47.0" layoutY="107.0" prefHeight="200.0" prefWidth="296.0">
+        <columns>
+            <TableColumn fx:id="fullNameColumn" prefWidth="165.0" text="Full name"/>
+            <TableColumn fx:id="checkBoxColumn" prefWidth="129.0" text="Absent/Present"/>
+        </columns>
+    </TableView>
+    <DatePicker fx:id="datePicker" layoutX="343.0" layoutY="45.0" promptText="Date" showWeekNumbers="true"/>
+</AnchorPane>

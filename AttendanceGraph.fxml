@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="AttendanceSheetsProject.AttendanceGraphController">
+    <BarChart fx:id="chart" layoutX="50.0" title="Attendance">
+      <xAxis>
+          <CategoryAxis fx:id="dates" label="Date/Lecture" side="BOTTOM"/>
+      </xAxis>
+      <yAxis>
+          <NumberAxis fx:id="timesAttended" label="Students attended" side="LEFT"/>
+      </yAxis>
+    </BarChart>
+</AnchorPane>

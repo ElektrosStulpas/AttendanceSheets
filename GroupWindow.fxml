@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="AttendanceSheetsProject.GroupWindowController">
+    <SplitPane dividerPositions="0.8333333333333334" layoutX="58.0" layoutY="26.0" orientation="VERTICAL"
+               prefHeight="240.0" prefWidth="485.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <TableView fx:id="groupTable" layoutY="14.0" prefHeight="210.0" prefWidth="486.0">
+                <columns>
+                    <TableColumn fx:id="nameColumn" onEditCommit="#changeNameCell" prefWidth="75.0"
+                                 text="Name"/>
+                    <TableColumn fx:id="surnameColumn" onEditCommit="#changeSurnameCell" prefWidth="75.0"
+                                 text="Surname"/>
+                </columns>
+            </TableView>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="379.0">
+            <Button layoutY="3.0" mnemonicParsing="false" onAction="#addStudent" text="Add"/>
+            <TextField fx:id="studentName" layoutX="82.0" layoutY="7.0" promptText="Name"/>
+            <TextField fx:id="studentSurname" layoutX="269.0" layoutY="3.0" promptText="Surname"/>
+        </AnchorPane>
+    </SplitPane>
+    <Button layoutX="326.0" layoutY="287.0" mnemonicParsing="false" onAction="#importCSV" text="ImportCSV"/>
+    <Button layoutX="430.0" layoutY="287.0" mnemonicParsing="false" onAction="#importExcel" text="ImportExcel"/>
+    <Button layoutX="328.0" layoutY="333.0" mnemonicParsing="false" onAction="#exportCSV" text="ExportCSV"/>
+    <Button layoutX="431.0" layoutY="333.0" mnemonicParsing="false" onAction="#exportExcel" text="ExportExcel"/>
+</AnchorPane>
